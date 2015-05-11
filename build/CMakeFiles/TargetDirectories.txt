@@ -1,3 +1,0 @@
-/home/anokl/Projects/C++/hashcode2014/build/lib/CMakeFiles/lib.dir
-/home/anokl/Projects/C++/hashcode2014/build/lib_test/CMakeFiles/lib_test.dir
-/home/anokl/Projects/C++/hashcode2014/build/examples/runner/CMakeFiles/runner.dir

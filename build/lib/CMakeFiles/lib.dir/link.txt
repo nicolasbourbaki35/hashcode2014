@@ -1,2 +1,0 @@
-/usr/bin/ar cr liblib.a  CMakeFiles/lib.dir/lib.cpp.o
-/usr/bin/ranlib liblib.a

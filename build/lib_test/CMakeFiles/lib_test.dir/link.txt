@@ -1,1 +1,0 @@
-/usr/local/bin/c++   -Wall -std=c++11    CMakeFiles/lib_test.dir/main.cpp.o CMakeFiles/lib_test.dir/lib_test.cpp.o  -o lib_test -rdynamic ../lib/liblib.a /home/anokl/Projects/C++/gtest-1.7.0/lib/.libs/libgtest.so /home/anokl/Projects/C++/gtest-1.7.0/lib/.libs/libgtest_main.so -lpthread -Wl,-rpath,/home/anokl/Projects/C++/gtest-1.7.0/lib/.libs 
