@@ -14,7 +14,10 @@ bool Validator::validate(Program const & program)
 bool Validator::exportToTga(std::string const & path, Table const & table)
 {
     auto i=0u, j = 0u;
-    TGAImage image(table[0].size(), table.size(), 1);
+    TGAImage image(table[0].size(), table.size(), 3);
+
+    
+    image.set(10,10, TGAColor(225,0,0));
     
     for(auto line : table)
     {
@@ -22,11 +25,13 @@ bool Validator::exportToTga(std::string const & path, Table const & table)
         {
             if(c == true)
             {
-                image.set(i,j, TGAColor(128,128,128));
+                image.set(j, i, TGAColor(225,0,0));
+           //     std::cout << "i=" << i << " j=" << j <<  std::endl;
             }
             ++j;  
         }
         ++i;
+        j=0;
     }
     image.write_tga_file(path.c_str());
     return true;
@@ -42,8 +47,8 @@ bool Validator::loadInput(std::string const & path, Table & table)
         {
             uint32_t width, height;
             
-            f >> width >> height;
-           
+            f >> height >> width;
+            
             std::cout << " Loading file " << path << " width=" << width << " height=" << height << std::endl;
             
             table.resize(height);       
@@ -51,11 +56,13 @@ bool Validator::loadInput(std::string const & path, Table & table)
             std::string line;
             int current_line = 0;
 
+            std::getline(f, line); 
+
             while (std::getline(f, line) && current_line<height)
             {
                 if (line.length() != width)
                 {
-                    std::cerr << " Line " << height << " wrong length " << line.length() << ". Expected length " << width << std::endl;
+                    std::cerr << " Line " << current_line << " wrong length " << line.length() << ". Expected length " << width << std::endl;
                     return  false;
                 }
                 
@@ -64,7 +71,7 @@ bool Validator::loadInput(std::string const & path, Table & table)
                 {
                     if (c == HASH)
                     {
-                        table.at(current_line).push_back(true);    
+                        table.at(current_line).push_back(true);  
                     }
                     else if (c == POINT)
                     {
@@ -79,6 +86,8 @@ bool Validator::loadInput(std::string const & path, Table & table)
 
                 current_line++;
             }
+            
+            std::cout << "File loaded " << table.size() << ":" << table[0].size() << std::endl;
         }
         else
         {
