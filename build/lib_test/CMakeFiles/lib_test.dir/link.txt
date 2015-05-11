@@ -1,0 +1,1 @@
+/usr/local/bin/c++   -Wall -std=c++11    CMakeFiles/lib_test.dir/main.cpp.o CMakeFiles/lib_test.dir/lib_test.cpp.o  -o lib_test -rdynamic ../lib/liblib.a -lpthread 

@@ -1,0 +1,1 @@
+/usr/local/bin/c++   -Wall -std=c++11    CMakeFiles/bin.dir/main.cpp.o  -o bin -rdynamic ../../lib/liblib.a 

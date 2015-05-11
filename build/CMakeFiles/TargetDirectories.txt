@@ -1,0 +1,3 @@
+/home/anokl/Projects/C++/project_template/build/binaries/bin/CMakeFiles/bin.dir
+/home/anokl/Projects/C++/project_template/build/lib/CMakeFiles/lib.dir
+/home/anokl/Projects/C++/project_template/build/lib_test/CMakeFiles/lib_test.dir

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/lib.h
+
+/home/anokl/Projects/C++/project_template/lib_test/lib_test.cpp
+gtest/gtest.h
+-
+lib.h
+/home/anokl/Projects/C++/project_template/lib_test/lib.h
+
+/home/anokl/Projects/C++/project_template/lib_test/main.cpp
+gtest/gtest.h
+-
+
