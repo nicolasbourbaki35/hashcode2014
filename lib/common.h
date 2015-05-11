@@ -11,7 +11,7 @@ struct Point {
     int y;
 };
 
-struct Output {
+struct Program {
     unsigned int NbInstructions;
     std::vector<std::string> instructions;
 };
