@@ -5,5 +5,5 @@ AUX_SOURCE_DIRECTORY(. sources)
 
 ADD_EXECUTABLE(validator ${sources})
 
-TARGET_LINK_LIBRARIES(lib)
+TARGET_LINK_LIBRARIES(validator lib)
 
