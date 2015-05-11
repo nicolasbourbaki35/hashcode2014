@@ -1,4 +1,4 @@
-# Install script for directory: /home/anokl/Projects/C++/project_template/lib_test
+# Install script for directory: /home/anokl/Projects/C++/hashcode2014/lib_test
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

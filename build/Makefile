@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anokl/Projects/C++/project_template
+CMAKE_SOURCE_DIR = /home/anokl/Projects/C++/hashcode2014
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anokl/Projects/C++/project_template/build
+CMAKE_BINARY_DIR = /home/anokl/Projects/C++/hashcode2014/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles /home/anokl/Projects/C++/project_template/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -125,17 +125,17 @@ lib_test/fast:
 .PHONY : lib_test/fast
 
 #=============================================================================
-# Target rules for targets named bin
+# Target rules for targets named runner
 
 # Build rule for target.
-bin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bin
-.PHONY : bin
+runner: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runner
+.PHONY : runner
 
 # fast build rule for target.
-bin/fast:
-	$(MAKE) -f binaries/bin/CMakeFiles/bin.dir/build.make binaries/bin/CMakeFiles/bin.dir/build
-.PHONY : bin/fast
+runner/fast:
+	$(MAKE) -f examples/runner/CMakeFiles/runner.dir/build.make examples/runner/CMakeFiles/runner.dir/build
+.PHONY : runner/fast
 
 # Help Target
 help:
@@ -147,7 +147,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lib"
 	@echo "... lib_test"
-	@echo "... bin"
+	@echo "... runner"
 .PHONY : help
 
 

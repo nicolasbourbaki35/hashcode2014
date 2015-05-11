@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anokl/Projects/C++/project_template
+CMAKE_SOURCE_DIR = /home/anokl/Projects/C++/hashcode2014
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anokl/Projects/C++/project_template/build
+CMAKE_BINARY_DIR = /home/anokl/Projects/C++/hashcode2014/build
 
 #=============================================================================
 # Directory level rules for directory lib
@@ -74,7 +74,7 @@ lib/preinstall:
 lib/CMakeFiles/lib.dir/all:
 	$(MAKE) -f lib/CMakeFiles/lib.dir/build.make lib/CMakeFiles/lib.dir/depend
 	$(MAKE) -f lib/CMakeFiles/lib.dir/build.make lib/CMakeFiles/lib.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/anokl/Projects/C++/project_template/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles  1
 	@echo "Built target lib"
 .PHONY : lib/CMakeFiles/lib.dir/all
 
@@ -84,9 +84,9 @@ all: lib/CMakeFiles/lib.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/lib.dir/rule
 
 # Convenience name for target.
@@ -124,7 +124,7 @@ lib_test/preinstall:
 lib_test/CMakeFiles/lib_test.dir/all: lib/CMakeFiles/lib.dir/all
 	$(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/depend
 	$(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/anokl/Projects/C++/project_template/build/CMakeFiles  3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles  2 3
 	@echo "Built target lib_test"
 .PHONY : lib_test/CMakeFiles/lib_test.dir/all
 
@@ -134,9 +134,9 @@ all: lib_test/CMakeFiles/lib_test.dir/all
 
 # Build rule for subdir invocation for target.
 lib_test/CMakeFiles/lib_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 lib_test/CMakeFiles/lib_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 0
 .PHONY : lib_test/CMakeFiles/lib_test.dir/rule
 
 # Convenience name for target.
@@ -153,68 +153,68 @@ clean: lib_test/CMakeFiles/lib_test.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory binaries
+# Directory level rules for directory examples
 
 # Convenience name for "all" pass in the directory.
-binaries/all: binaries/bin/all
-.PHONY : binaries/all
+examples/all: examples/runner/all
+.PHONY : examples/all
 
 # Convenience name for "clean" pass in the directory.
-binaries/clean: binaries/bin/clean
-.PHONY : binaries/clean
+examples/clean: examples/runner/clean
+.PHONY : examples/clean
 
 # Convenience name for "preinstall" pass in the directory.
-binaries/preinstall: binaries/bin/preinstall
-.PHONY : binaries/preinstall
+examples/preinstall: examples/runner/preinstall
+.PHONY : examples/preinstall
 
 #=============================================================================
-# Directory level rules for directory binaries/bin
+# Directory level rules for directory examples/runner
 
 # Convenience name for "all" pass in the directory.
-binaries/bin/all: binaries/bin/CMakeFiles/bin.dir/all
-.PHONY : binaries/bin/all
+examples/runner/all: examples/runner/CMakeFiles/runner.dir/all
+.PHONY : examples/runner/all
 
 # Convenience name for "clean" pass in the directory.
-binaries/bin/clean: binaries/bin/CMakeFiles/bin.dir/clean
-.PHONY : binaries/bin/clean
+examples/runner/clean: examples/runner/CMakeFiles/runner.dir/clean
+.PHONY : examples/runner/clean
 
 # Convenience name for "preinstall" pass in the directory.
-binaries/bin/preinstall:
-.PHONY : binaries/bin/preinstall
+examples/runner/preinstall:
+.PHONY : examples/runner/preinstall
 
 #=============================================================================
-# Target rules for target binaries/bin/CMakeFiles/bin.dir
+# Target rules for target examples/runner/CMakeFiles/runner.dir
 
 # All Build rule for target.
-binaries/bin/CMakeFiles/bin.dir/all: lib/CMakeFiles/lib.dir/all
-	$(MAKE) -f binaries/bin/CMakeFiles/bin.dir/build.make binaries/bin/CMakeFiles/bin.dir/depend
-	$(MAKE) -f binaries/bin/CMakeFiles/bin.dir/build.make binaries/bin/CMakeFiles/bin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/anokl/Projects/C++/project_template/build/CMakeFiles  1
-	@echo "Built target bin"
-.PHONY : binaries/bin/CMakeFiles/bin.dir/all
+examples/runner/CMakeFiles/runner.dir/all:
+	$(MAKE) -f examples/runner/CMakeFiles/runner.dir/build.make examples/runner/CMakeFiles/runner.dir/depend
+	$(MAKE) -f examples/runner/CMakeFiles/runner.dir/build.make examples/runner/CMakeFiles/runner.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles  4
+	@echo "Built target runner"
+.PHONY : examples/runner/CMakeFiles/runner.dir/all
 
 # Include target in all.
-all: binaries/bin/CMakeFiles/bin.dir/all
+all: examples/runner/CMakeFiles/runner.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-binaries/bin/CMakeFiles/bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 binaries/bin/CMakeFiles/bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 0
-.PHONY : binaries/bin/CMakeFiles/bin.dir/rule
+examples/runner/CMakeFiles/runner.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 examples/runner/CMakeFiles/runner.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 0
+.PHONY : examples/runner/CMakeFiles/runner.dir/rule
 
 # Convenience name for target.
-bin: binaries/bin/CMakeFiles/bin.dir/rule
-.PHONY : bin
+runner: examples/runner/CMakeFiles/runner.dir/rule
+.PHONY : runner
 
 # clean rule for target.
-binaries/bin/CMakeFiles/bin.dir/clean:
-	$(MAKE) -f binaries/bin/CMakeFiles/bin.dir/build.make binaries/bin/CMakeFiles/bin.dir/clean
-.PHONY : binaries/bin/CMakeFiles/bin.dir/clean
+examples/runner/CMakeFiles/runner.dir/clean:
+	$(MAKE) -f examples/runner/CMakeFiles/runner.dir/build.make examples/runner/CMakeFiles/runner.dir/clean
+.PHONY : examples/runner/CMakeFiles/runner.dir/clean
 
 # clean rule for target.
-clean: binaries/bin/CMakeFiles/bin.dir/clean
+clean: examples/runner/CMakeFiles/runner.dir/clean
 .PHONY : clean
 
 #=============================================================================

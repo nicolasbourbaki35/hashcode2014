@@ -8,11 +8,11 @@ SET(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "../binaries/CMakeLists.txt"
-  "../binaries/bin/CMakeLists.txt"
   "CMakeFiles/CMakeCCompiler.cmake"
   "CMakeFiles/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeSystem.cmake"
+  "../examples/CMakeLists.txt"
+  "../examples/runner/CMakeLists.txt"
   "../lib/CMakeLists.txt"
   "../lib_test/CMakeLists.txt"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
@@ -46,13 +46,13 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib_test/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "binaries/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "binaries/bin/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "examples/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "examples/runner/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
   "lib/CMakeFiles/lib.dir/DependInfo.cmake"
   "lib_test/CMakeFiles/lib_test.dir/DependInfo.cmake"
-  "binaries/bin/CMakeFiles/bin.dir/DependInfo.cmake"
+  "examples/runner/CMakeFiles/runner.dir/DependInfo.cmake"
   )

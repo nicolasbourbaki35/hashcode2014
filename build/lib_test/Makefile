@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anokl/Projects/C++/project_template
+CMAKE_SOURCE_DIR = /home/anokl/Projects/C++/hashcode2014
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anokl/Projects/C++/project_template/build
+CMAKE_BINARY_DIR = /home/anokl/Projects/C++/hashcode2014/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/anokl/Projects/C++/project_template/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles /home/anokl/Projects/C++/project_template/build/lib_test/CMakeFiles/progress.marks
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/project_template/build/CMakeFiles 0
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles /home/anokl/Projects/C++/hashcode2014/build/lib_test/CMakeFiles/progress.marks
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anokl/Projects/C++/hashcode2014/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/clean
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,22 +85,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/preinstall
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/preinstall
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anokl/Projects/C++/project_template/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib_test/CMakeFiles/lib_test.dir/rule:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/CMakeFiles/lib_test.dir/rule
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f CMakeFiles/Makefile2 lib_test/CMakeFiles/lib_test.dir/rule
 .PHONY : lib_test/CMakeFiles/lib_test.dir/rule
 
 # Convenience name for target.
@@ -109,7 +109,7 @@ lib_test: lib_test/CMakeFiles/lib_test.dir/rule
 
 # fast build rule for target.
 lib_test/fast:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/build
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/build
 .PHONY : lib_test/fast
 
 lib_test.o: lib_test.cpp.o
@@ -117,7 +117,7 @@ lib_test.o: lib_test.cpp.o
 
 # target to build an object file
 lib_test.cpp.o:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/lib_test.cpp.o
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/lib_test.cpp.o
 .PHONY : lib_test.cpp.o
 
 lib_test.i: lib_test.cpp.i
@@ -125,7 +125,7 @@ lib_test.i: lib_test.cpp.i
 
 # target to preprocess a source file
 lib_test.cpp.i:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/lib_test.cpp.i
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/lib_test.cpp.i
 .PHONY : lib_test.cpp.i
 
 lib_test.s: lib_test.cpp.s
@@ -133,7 +133,7 @@ lib_test.s: lib_test.cpp.s
 
 # target to generate assembly for a file
 lib_test.cpp.s:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/lib_test.cpp.s
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/lib_test.cpp.s
 .PHONY : lib_test.cpp.s
 
 main.o: main.cpp.o
@@ -141,7 +141,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/main.cpp.o
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -149,7 +149,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/main.cpp.i
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -157,7 +157,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/anokl/Projects/C++/project_template/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/main.cpp.s
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(MAKE) -f lib_test/CMakeFiles/lib_test.dir/build.make lib_test/CMakeFiles/lib_test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -186,6 +186,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anokl/Projects/C++/project_template/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/anokl/Projects/C++/hashcode2014/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
