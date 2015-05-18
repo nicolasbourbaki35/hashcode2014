@@ -7,13 +7,22 @@ using Out = std::vector<std::vector<char> >;
 
 int main(int argc, char ** argv)
 {
-    std::ifstream f(argv[1]);
+    if(argc < 3)
+    {
+        std::cout << "Usage: \n\t" << argv[0] << " : " << " <program_file> <height> <width>" << std::endl;
+        exit (0);
+    }
     
+    std::ifstream f(argv[1]);
+
+    int HEIGHT = atoi(argv[2]);
+    int WIDTH = atoi(argv[3]);
+
     Out o;
-    o.resize(atoi(argv[2]));
+    o.resize(HEIGHT);
     for(auto &v : o)
     {
-        v.assign(atoi(argv[3]), '.');
+        v.assign(WIDTH, '.');
     }
 
     if (f.is_open())
@@ -77,7 +86,7 @@ int main(int argc, char ** argv)
         }
     }
     
-    std::cout << "716 1522" << std::endl;
+    std::cout << HEIGHT << " " << WIDTH << std::endl;
     for (auto & l : o)
     {
         for(auto & c : l)
