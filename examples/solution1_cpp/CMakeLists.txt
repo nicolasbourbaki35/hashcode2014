@@ -1,0 +1,9 @@
+
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/lib)
+
+AUX_SOURCE_DIRECTORY(. sources)
+
+ADD_EXECUTABLE(solution1_cpp ${sources})
+
+TARGET_LINK_LIBRARIES(solution1_cpp lib)
+
