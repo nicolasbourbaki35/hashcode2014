@@ -7,6 +7,7 @@ from twisted.web.static import File
 from twisted.python import log
 from datetime import datetime
 from renderHtml import RenderHtml
+from renderHtml import PointFile 
 
 import time
 
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     server = server.Site(root)
     
     root.putChild('', RenderHtml())
+    root.putChild('points', PointFile())
     
     log.startLogging(sys.stdout)
     log.msg('Starting server: %s' %str(datetime.now()))

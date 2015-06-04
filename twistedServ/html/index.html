@@ -1,18 +1,142 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      #map-canvas {
+        width: 800px;
+        height: 600px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        var map;
+        var markerCount = 0;
 
+        var pointsShown = false;
+        var pointMarkers = [];
+        var pointsLoaded = false;
 
-<link rel=StyleSheet href="style.css" type="text/css" media=screen>
+        var startPoint;
 
-<link rel="stylesheet" href="jquery-ui-1.8.17/development-bundle/themes/base/jquery.ui.all.css">
-<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="jquery-ui-1.8.17/js/jquery-ui-1.8.17.custom.min.js"></script>
+        function initialize() 
+        {
+            var mapCanvas = document.getElementById('map-canvas');
+            var mapOptions = 
+            {
+                center: new google.maps.LatLng(48.8351503, 2.3077904),
+                zoom: 12,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            map = new google.maps.Map(mapCanvas, mapOptions)
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    
+        function createMarkers(lat, lon)
+        {
+            var pinIcon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FF0000",
+                    null, /* size is determined at runtime */
+                    null, /* origin is 0,0 */
+                    null, /* anchor is bottom center of the scaled image */
+                    new google.maps.Size(7, 12)
+                    );  
+            var myLatLng = new google.maps.LatLng(lat, lon);
+            var marker = new google.maps.Marker(
+                {
+                    position: myLatLng,
+                  //  map: map,
+                    icon: pinIcon
+                });
+         
+            return marker;
+        }
 
+        showMarkers(markers)
+        {
+            for (var i = 0; i < markers.length; i++) {
+                 markers[i].setMap(map);
+            }
+        }
+       
+        hideMarkers(markers)
+        {
+            for (var i = 0; i < markers.length; i++) {
+                 markers[i].setMap(null);
+            }
+        }    
 
-<p> Un truc à dire ? </p>
+        function showPoints(markers, loaded, shown) 
+        {
+            if (!loaded.value)
+            {
+                var data = httpGet("points?file=points.txt") 
+                var lines = data.split('\n');
+                for(var i=0; i<lines.length; i++) 
+                {
+                    var values = lines[i].split(' ');
+                    var lat = parseFloat(values[0]);
+                    var lon  = parseFloat(values[1]);
+                    markers.push(createMarkers(lat, lon));
+                }
+                loaded.value = true;
+            }
+            
+            if(!shown.value)
+            {
+                //showMarkers(markers);
+                for (var i = 0; i < markers.length; i++) {
+                     markers[i].setMap(map);
+                }
+            }
+            else
+            {
+                //hideMarkers(markers);
+                for (var i = 0; i < markers.length; i++) {
+                     markers[i].setMap(null);
+                }
+            }
+            
+            shown.value=!shown.value;
+        }
 
-</div> <!-- Fin de #main -->
-</body>
+        function showStartPoint()
+        {
+            var data = httpGet("points?file=start_point.txt") 
+            var values = data.split(' ');
+            var lat = parseFloat(values[0]);
+            var lon  = parseFloat(values[1]);
+
+            var pinIcon = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|FFFF00",
+                    null, /* size is determined at runtime */
+                    null, /* origin is 0,0 */
+                    null, /* anchor is bottom center of the scaled image */
+                    new google.maps.Size(14, 24)
+                    );  
+            var myLatLng = new google.maps.LatLng(lat, lon);
+            var marker = new google.maps.Marker(
+                {
+                    position: myLatLng,
+                    map: map,
+                    icon: pinIcon
+                });
+        }
+
+        function httpGet(theUrl)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false );
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+        }
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+    <button onclick="showPoints(pointMarkers, Object(pointsLoaded), Object(pointsShown))">Show/hide points</button>
+    <button onclick="showStartPoint()">Show/hide start point</button>
+    <!--script>
+        document.write(httpGet("points"));
+    </script-->
+  </body>
 </html>
+

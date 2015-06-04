@@ -1,0 +1,9 @@
+
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/lib)
+
+AUX_SOURCE_DIRECTORY(. sources)
+
+ADD_EXECUTABLE(mainround ${sources})
+
+TARGET_LINK_LIBRARIES(mainround lib)
+
